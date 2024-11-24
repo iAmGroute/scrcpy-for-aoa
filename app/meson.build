@@ -108,16 +108,8 @@ endif
 cc = meson.get_compiler('c')
 
 dependencies = [
-    dependency('libavformat', version: '>= 57.33'),
-    dependency('libavcodec', version: '>= 57.37'),
-    dependency('libavutil'),
-    dependency('libswresample'),
     dependency('sdl2', version: '>= 2.0.5'),
 ]
-
-if v4l2_support
-    dependencies += dependency('libavdevice')
-endif
 
 if usb_support
     dependencies += dependency('libusb-1.0')
